@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  labels:
+    app: nginx
+    app.kubernetes.io/instance: ngnix-alphine
+    tag: alpine
+  name: nginx-apline
+  namespace: demo
+spec:
+  ports:
+  - port: 8111
+    protocol: TCP
+    targetPort: 8111
+    nodePort: 30009
+  selector:
+    app: nginx
+    tag: apline
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

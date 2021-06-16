@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: manifests
-    repoURL: https://github.com/seetdev-udacity/nd064_ngnix_alphine.git
+    path: ngnix_alphine/manifests
+    repoURL: https://github.com/seetdev-udacity/nd064_argocd_demo.git
     targetRevision: HEAD
   syncPolicy: {}

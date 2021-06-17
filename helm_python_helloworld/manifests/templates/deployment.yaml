@@ -1,12 +1,12 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: python-helloworld
   name: python-helloworld
-  namespace: test
+  namespace: {{ .Values.namespace.name }}
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: python-helloworld
@@ -21,6 +21,6 @@ spec:
         app: python-helloworld
     specs:
       containers:
-      - image: seetdevudacity/python-helloworld:latest
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
         name: python-helloworld

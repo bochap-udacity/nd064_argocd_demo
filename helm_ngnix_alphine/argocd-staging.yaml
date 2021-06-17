@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-      - values-prod.yaml
+      - values-staging.yaml
     path: helm_ngnix_alphine/manifests
     repoURL: https://github.com/seetdev-udacity/nd064_argocd_demo.git
     targetRevision: HEAD

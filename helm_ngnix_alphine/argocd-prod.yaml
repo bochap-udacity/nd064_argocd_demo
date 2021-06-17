@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: python-helloworld
+  name: helm-ngnix-alphine-prod
   namespace: argocd
 spec:
   destination:
@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values-prod.yaml
-    path: helm_python_helloworld/manifests
-    repoURL: https://github.com/seetdev-udacity/nd064_argocd_demo
+    path: helm_ngnix_alphine/manifests
+    repoURL: https://github.com/seetdev-udacity/nd064_argocd_demo.git
     targetRevision: HEAD
   syncPolicy: {}

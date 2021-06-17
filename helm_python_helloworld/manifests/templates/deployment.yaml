@@ -4,9 +4,9 @@ metadata:
   labels:
     app: python-helloworld
   name: python-helloworld
-  namespace: {{ .Values.namespace.name }}
+  namespace: test
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 3
   selector:
     matchLabels:
       app: python-helloworld
@@ -21,6 +21,6 @@ spec:
         app: python-helloworld
     specs:
       containers:
-      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+      - image: seetdevudacity/python-helloworld:latest
         imagePullPolicy: IfNotPresent
         name: python-helloworld

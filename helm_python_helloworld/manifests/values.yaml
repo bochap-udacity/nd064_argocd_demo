@@ -2,7 +2,7 @@ namespace:
   name: test
 
 image:
-  repository: seetdevudacity/python-helloworld
-  tag: latest
+  repository: pixelpotato/python-helloworld 
+  tag: v1.0.0
 
 replicaCount: 3

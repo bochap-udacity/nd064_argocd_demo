@@ -19,7 +19,7 @@ spec:
     metadata:
       labels:
         app: python-helloworld
-    specs:
+    spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent

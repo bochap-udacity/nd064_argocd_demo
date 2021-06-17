@@ -4,5 +4,4 @@ metadata:
   name: nginx-version
   namespace: {{.Values.namespace.name}}
 data:
-  version:
-    {{.Values.configmap.data}}
+  {{.Values.configmap.data}}
